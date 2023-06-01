@@ -1,0 +1,66 @@
+<ShopScr>:
+    FloatLayout:
+        Image:
+            allow_stretch: True
+            keep_ratio: False
+            source: 'D:\\Projects\\maze\\shop.py\\images (2).jpg'
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                orientation: 'horizontal'
+                Button:
+                    id: bt1
+                Button:
+                    id: bt2
+            ScrollView:
+                size_hint_y: None
+                size_hint: 1, 1
+                GridLayout:
+                    id: items
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 2
+                    spacing: 150
+                    row_default_height: 100
+                    Button: 
+                        id: 4
+                        size_hint: 0.5, 0.5
+                    Button: 
+                        id: 5
+                        size_hint: 0.5, 0.5
+            BoxLayout:
+                orientation: 'horizontal'
+                Button:
+                    id: bt3
+                    text: "Back to Log in"
+                    on_press: root.toLoginScr()
+                Button: 
+                    id: bt4
+<Registr>:
+    BoxLayout:
+        id: layout
+        orientation: 'vertical'
+        TextInput:
+            background_color: 1, 1, 1, 1
+            id: intex1
+            pos_hint: {'center_x': 0.5}
+            size_hint: 0.7, 0.1
+        TextInput:
+            background_color: 1, 1, 1, 1
+            id: intex2
+            size_hint: 0.7, 0.1
+            pos_hint: {'center_x': 0.5}
+        Button:
+            background_color: 1, 1, 1, 1
+            id: goshop
+            size_hint: 0.7, 0.2
+            text: 'Go to the shop'
+            
+            pos_hint: {'center_x': 0.5}
+            on_press: root.toShopScr()
+
+
+
+
+
+
